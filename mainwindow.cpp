@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->showfile->setText(filePath);    // отобразил путь к файлу
         ui->startButton->setEnabled(true);  // активировал кнопку сканирования
     });
-    connect(ui->startButton, &QPushButton::clicked, this, onScanFileClicked); // нажал на сканирование
+    connect(ui->startButton, &QPushButton::clicked, this, onScanFileClicked); // начал сканирование
     connect(this, &MainWindow::showSortWords, [this](){
 
         QString filePath = QDir::currentPath() + "/ResultPairs.txt"; // в папке build (чтобы в "докуметах" -> закоментить эту и раскоментить следующую)
